@@ -1,0 +1,1 @@
+modeul.exports = {};

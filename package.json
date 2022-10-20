@@ -1,0 +1,24 @@
+{
+  "name": "derby-browserify",
+  "version": "1.0.0",
+  "description": "Browserify plugin for Derby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Craig Beck <craig.beck@lever.co>",
+  "license": "ISC",
+  "dependencies": {
+    "browser-pack-flat": "^3.5.0",
+    "browserify": "^16.5.2",
+    "buffer": "^6.0.3",
+    "common-shakeify": "^1.1.2",
+    "exorcist": "^2.0.0",
+    "minify-stream": "^2.1.0",
+    "stream": "0.0.2",
+    "through": "^2.3.8"
+  },
+  "peerDependencies": {
+    "derby": "*"
+  }
+}
