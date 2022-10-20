@@ -29,7 +29,6 @@ module.exports = function derbyBundler(app, options) {
   const { App, util } = derby;
 
   const Backend = derby.Backend || derby.Store;
-  console.log('Backend', Backend);
 
   Backend.prototype.bundle = function(file, options, cb) {
     if (typeof options === 'function') {
