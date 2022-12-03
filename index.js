@@ -41,6 +41,9 @@ module.exports = function derbyBundler(app, options) {
     var b = browserify(options);
     this.emit('bundle', b);
     b.add(file);
+    if (process.env.BUNDLE_DEBUG) {
+      b.on('file', (...args) => { console.log('FILE', ...args) });
+    }
 
     var bundleStream = (minify) ?
       b.plugin('common-shakeify')
