@@ -42,7 +42,9 @@ module.exports = function derbyBundler(app, options) {
     this.emit('bundle', b);
     b.add(file);
     if (process.env.BUNDLE_DEBUG) {
-      b.on('file', (...args) => { console.log('FILE', ...args) });
+      b.pipeline.on('file', (file, id, parent) => {
+        console.log('FILE', file, id, JSON.stringify(parent));
+      });
     }
 
     var bundleStream = (minify) ?
