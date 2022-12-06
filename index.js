@@ -88,7 +88,7 @@ module.exports = function derbyBundler(app, options) {
       bundle.require(derbyPath, {expose: 'derby'});
       // Hack to inject the views script into the Browserify bundle by replacing
       // the empty _views.js file with the generated source
-      const viewsFilename = require.resolve('./_views');
+      const viewsFilename = require.resolve('derby/lib/_views');
       bundle.transform(function(filename) {
         if (filename !== viewsFilename) return through();
         return through(
