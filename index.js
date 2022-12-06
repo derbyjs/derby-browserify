@@ -49,7 +49,6 @@ module.exports = function derbyBundler(app, options) {
 
     var bundleStream = (minify) ?
       b.plugin('common-shakeify')
-        .plugin('browser-pack-flat/plugin')
         .bundle()
         .pipe(minifyStream()) :
       b.bundle();

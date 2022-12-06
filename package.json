@@ -9,7 +9,6 @@
   "author": "Craig Beck <craig.beck@lever.co>",
   "license": "ISC",
   "dependencies": {
-    "browser-pack-flat": "^3.5.0",
     "browserify": "^13.3.0",
     "buffer": "^6.0.3",
     "common-shakeify": "^1.1.2",
