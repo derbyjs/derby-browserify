@@ -21,7 +21,6 @@ module.exports = function derbyBundler(app, options) {
   }
   const { derby } = app;
   const { App, util } = derby;
-  debugger;
 
   const Backend = derby.Backend || derby.Store;
 
@@ -74,8 +73,8 @@ module.exports = function derbyBundler(app, options) {
       cb(null, source, map);
     };
     if (typeof backend.bundle !== 'function') {
-      // monkey patch in case where backend has been setup
-      // prior to being able to extend via prototype
+      // monkey patch in case where backend provided
+      // by different versions of derby/racer
       backend.bundle = backendBundle;
     }
     backend.bundle(app.filename, options, bundleCallback);
